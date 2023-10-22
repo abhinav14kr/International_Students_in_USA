@@ -14585,10 +14585,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <span class="n">file_path</span> <span class="o">=</span> <span class="s1">'C:/Users/Abhinav/Desktop/Data Analytics/US_Students_Records.xlsx'</span>
 
-<span class="c1"># Load the XLSX file</span>
+<span class="c1"># Loading the XLSX file</span>
 <span class="n">record</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
 
-<span class="c1"># Display the first few rows to verify the data was loaded</span>
+<span class="c1"># Displaying the first few rows to verify the data was loaded</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -15435,14 +15435,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Create a line plot to show the trend over the years.</span>
+<span class="c1"># Creating a line plot to show the trend over the years.</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">record</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Total'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'b'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Total Students'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Trend of Total International Students from All Continents Going to the USA'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Year'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Total Number of Students'</span><span class="p">)</span>
 
-<span class="c1"># Set x-axis ticks at 5-year intervals (adjust based on your dataset)</span>
+<span class="c1"># Setting x-axis ticks at 5-year intervals</span>
 <span class="n">xticks</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">record</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">]),</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">xlabels</span> <span class="o">=</span> <span class="n">record</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">xticks</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="s1">'-'</span><span class="p">))</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">xticks</span><span class="p">)</span>
@@ -15498,17 +15498,15 @@ class="
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Assuming your dataset is already loaded and named as 'record'.</span>
-
-<span class="c1"># Create a line plot for the selected continents.</span>
+<span class="c1"># Creating a line plot for the selected continents.</span>
 <span class="n">selected_continents</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">'Asia'</span><span class="p">,</span> <span class="s1">'East_Asia'</span><span class="p">,</span> <span class="s1">'South_and_Central_Asia'</span><span class="p">,</span> <span class="s1">'Southeast_Asia'</span>
 <span class="p">]</span>
 
-<span class="c1"># Define the years for custom x-axis labels.</span>
+<span class="c1"># Defining the years for custom x-axis labels.</span>
 <span class="n">custom_years</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'1949-50'</span><span class="p">,</span> <span class="s1">'1974-75'</span><span class="p">,</span> <span class="s1">'1999-00'</span><span class="p">,</span> <span class="s1">'2004-05'</span><span class="p">,</span> <span class="s1">'2009-10'</span><span class="p">,</span> <span class="s1">'2014-15'</span><span class="p">,</span> <span class="s1">'2019-20'</span><span class="p">]</span>
 
-<span class="c1"># Create a mapping from custom years to the closest available data points.</span>
+<span class="c1"># Creating a mapping from custom years to the closest available data points.</span>
 <span class="n">custom_years_to_data_index</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'1949-50'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="s1">'1974-75'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
@@ -15529,10 +15527,10 @@ class="
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'upper left'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1"># Expand the vertical axis.</span>
+<span class="c1"># Expanding the vertical axis.</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="c1"># Set custom x-axis ticks and add labels at the end of each line.</span>
+<span class="c1"># Setting custom x-axis ticks and add labels at the end of each line.</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="n">custom_years_to_data_index</span><span class="p">[</span><span class="n">year</span><span class="p">]</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">custom_years</span><span class="p">],</span> <span class="n">custom_years</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">selected_continents</span><span class="p">:</span>
@@ -15588,23 +15586,21 @@ class="
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Assuming your dataset is already loaded and named as 'record'.</span>
-
-<span class="c1"># Set a Seaborn style with a dark grey background</span>
+<span class="c1"># Setting a Seaborn style with a dark grey background</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">"darkgrid"</span><span class="p">)</span>
 
-<span class="c1"># Create a color palette</span>
+<span class="c1"># Creating a color palette</span>
 <span class="n">colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">"husl"</span><span class="p">)</span>
 
-<span class="c1"># Create a line plot for the selected continents.</span>
+<span class="c1"># Creating a line plot for the selected continents.</span>
 <span class="n">selected_continents</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">'Asia'</span><span class="p">,</span> <span class="s1">'East_Asia'</span><span class="p">,</span> <span class="s1">'South_and_Central_Asia'</span><span class="p">,</span> <span class="s1">'Southeast_Asia'</span>
 <span class="p">]</span>
 
-<span class="c1"># Define the years for custom x-axis labels.</span>
+<span class="c1"># Defining the years for custom x-axis labels.</span>
 <span class="n">custom_years</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'1949-50'</span><span class="p">,</span> <span class="s1">'1974-75'</span><span class="p">,</span> <span class="s1">'1999-00'</span><span class="p">,</span> <span class="s1">'2004-05'</span><span class="p">,</span> <span class="s1">'2009-10'</span><span class="p">,</span> <span class="s1">'2014-15'</span><span class="p">,</span> <span class="s1">'2019-20'</span><span class="p">]</span>
 
-<span class="c1"># Create a mapping from custom years to the closest available data points.</span>
+<span class="c1"># Creating a mapping from custom years to the closest available data points.</span>
 <span class="n">custom_years_to_data_index</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'1949-50'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="s1">'1974-75'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
@@ -15615,7 +15611,7 @@ class="
     <span class="s1">'2019-20'</span><span class="p">:</span> <span class="mi">30</span>
 <span class="p">}</span>
 
-<span class="c1"># Create a dark grey background</span>
+<span class="c1"># Creating a dark grey background</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">'#333333'</span><span class="p">)</span>  <span class="c1"># Dark grey background</span>
@@ -15629,13 +15625,13 @@ class="
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'upper left'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">)</span>
 
-<span class="c1"># Expand the vertical axis.</span>
+<span class="c1"># Expanding the vertical axis.</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="c1"># Set custom x-axis ticks and add labels at the end of each line.</span>
+<span class="c1"># Setting custom x-axis ticks and add labels at the end of each line.</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="n">custom_years_to_data_index</span><span class="p">[</span><span class="n">year</span><span class="p">]</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">custom_years</span><span class="p">],</span> <span class="n">custom_years</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
 
-<span class="c1"># Add values to the x-axis labels</span>
+<span class="c1"># Adding values to the x-axis labels</span>
 <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">custom_years</span><span class="p">:</span>
     <span class="n">x_pos</span> <span class="o">=</span> <span class="n">custom_years_to_data_index</span><span class="p">[</span><span class="n">year</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">selected_continents</span><span class="p">:</span>
